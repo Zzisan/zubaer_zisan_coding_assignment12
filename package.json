@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
-  "*.{js,jsx,ts,tsx}": [
-    "eslint --fix",
-    "prettier --write",
-    "npm test -- --bail --findRelatedTests"
-  ]
-},
-
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "npm test -- --bail --findRelatedTests"
+    ]
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -28,17 +27,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "storybook": "storybook dev -p 6006",
-  "build-storybook": "storybook build",
-  "prepare": "husky install",
-  "lint": "eslint . --fix"
-},
-
-
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "husky install",
+    "lint": "eslint . --fix"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -57,8 +54,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-
-    
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
