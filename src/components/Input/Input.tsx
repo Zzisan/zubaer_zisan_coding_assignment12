@@ -41,7 +41,14 @@ const ErrorMessage = styled.span`
   color: red;
 `;
 
-const Input: React.FC<InputProps> = ({ label, placeholder, value, onChange, disabled, error }) => {
+const Input: React.FC<InputProps> = ({
+  label,
+  placeholder,
+  value,
+  onChange,
+  disabled,
+  error,
+}) => {
   return (
     <InputContainer>
       {label && <StyledLabel>{label}</StyledLabel>}

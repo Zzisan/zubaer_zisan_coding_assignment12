@@ -15,7 +15,10 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
 
 const Dropdown: React.FC<DropdownProps> = ({ options, onChange, disabled }) => {
   return (
-    <StyledSelect disabled={disabled} onChange={(e) => onChange?.(e.target.value)}>
+    <StyledSelect
+      disabled={disabled}
+      onChange={(e) => onChange?.(e.target.value)}
+    >
       {options.map((option, index) => (
         <option key={index} value={option.value}>
           {option.label}

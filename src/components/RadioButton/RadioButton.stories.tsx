@@ -1,4 +1,3 @@
-
 import type { Meta, StoryObj } from '@storybook/react';
 import RadioButton from './RadioButton';
 

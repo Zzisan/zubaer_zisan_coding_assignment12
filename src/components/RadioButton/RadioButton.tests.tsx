@@ -3,7 +3,9 @@ import { render, fireEvent } from '@testing-library/react';
 import RadioButton from './RadioButton';
 
 test('Radio Button is visible', () => {
-  const { getByLabelText } = render(<RadioButton label="Test Radio" name="testGroup" />);
+  const { getByLabelText } = render(
+    <RadioButton label="Test Radio" name="testGroup" />
+  );
   expect(getByLabelText('Test Radio')).toBeVisible();
 });
 
@@ -20,7 +22,12 @@ test('Radio Button changes checked state on click', () => {
 test('Disabled Radio Button does not trigger change', () => {
   const handleChange = jest.fn();
   const { getByLabelText } = render(
-    <RadioButton label="Test Radio" name="testGroup" disabled onChange={handleChange} />
+    <RadioButton
+      label="Test Radio"
+      name="testGroup"
+      disabled
+      onChange={handleChange}
+    />
   );
 
   fireEvent.click(getByLabelText('Test Radio'));

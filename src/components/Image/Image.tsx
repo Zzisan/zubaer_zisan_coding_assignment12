@@ -10,7 +10,14 @@ const StyledImage = styled.img<{ rounded?: boolean; bordered?: boolean }>`
   border: ${(props) => (props.bordered ? '2px solid #ccc' : 'none')};
 `;
 
-const Image: React.FC<ImageProps> = ({ src, alt, width, height, rounded, bordered }) => {
+const Image: React.FC<ImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  rounded,
+  bordered,
+}) => {
   return (
     <StyledImage
       src={src}

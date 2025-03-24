@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
 // Styled Hero Image Container
-const HeroContainer = styled.div<{ src: string; height?: string; overlay?: boolean }>`
+const HeroContainer = styled.div<{
+  src: string;
+  height?: string;
+  overlay?: boolean;
+}>`
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
@@ -38,7 +42,14 @@ const TextContainer = styled.div<{ align?: 'left' | 'center' | 'right' }>`
   text-align: ${(props) => props.align || 'center'};
 `;
 
-const HeroImage: React.FC<HeroImageProps> = ({ src, title, subtitle, height, overlay, align }) => {
+const HeroImage: React.FC<HeroImageProps> = ({
+  src,
+  title,
+  subtitle,
+  height,
+  overlay,
+  align,
+}) => {
   return (
     <HeroContainer src={src} height={height} overlay={overlay}>
       <TextContainer align={align}>

@@ -27,10 +27,7 @@ test('Dropdown handles selection change', () => {
 
 test('Dropdown is disabled', () => {
   const { getByRole } = render(
-    <Dropdown
-      options={[{ label: 'Option 1', value: 'option1' }]}
-      disabled
-    />
+    <Dropdown options={[{ label: 'Option 1', value: 'option1' }]} disabled />
   );
   expect(getByRole('combobox')).toBeDisabled();
 });

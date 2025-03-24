@@ -19,7 +19,13 @@ const StyledRadio = styled.input`
   cursor: pointer;
 `;
 
-const RadioButton: React.FC<RadioButtonProps> = ({ label, name, checked, onChange, disabled }) => {
+const RadioButton: React.FC<RadioButtonProps> = ({
+  label,
+  name,
+  checked,
+  onChange,
+  disabled,
+}) => {
   return (
     <StyledLabel disabled={disabled}>
       <StyledRadio
