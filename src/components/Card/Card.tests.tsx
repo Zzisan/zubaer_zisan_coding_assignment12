@@ -12,7 +12,12 @@ test('Card renders correctly', () => {
 test('Card button works when clicked', () => {
   const handleClick = jest.fn();
   const { getByText } = render(
-    <Card title="Test Card" description="Test Description" buttonText="Click Me" onButtonClick={handleClick} />
+    <Card
+      title="Test Card"
+      description="Test Description"
+      buttonText="Click Me"
+      onButtonClick={handleClick}
+    />
   );
 
   fireEvent.click(getByText('Click Me'));

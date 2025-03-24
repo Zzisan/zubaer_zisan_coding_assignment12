@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledFooter = styled.tfoot`
-  background-color:rgb(16, 43, 71); /* Blue background */
+  background-color: rgb(16, 43, 71); /* Blue background */
   color: white; /* White text */
   font-weight: bold;
   text-align: center;
@@ -12,7 +12,13 @@ const StyledFooter = styled.tfoot`
 `;
 
 const TableFooter: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <StyledFooter><tr><td colSpan={100}>{children}</td></tr></StyledFooter>;
+  return (
+    <StyledFooter>
+      <tr>
+        <td colSpan={100}>{children}</td>
+      </tr>
+    </StyledFooter>
+  );
 };
 
 export default TableFooter;

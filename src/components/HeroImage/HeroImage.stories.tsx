@@ -1,4 +1,3 @@
-
 import type { Meta, StoryObj } from '@storybook/react';
 import HeroImage from './HeroImage';
 
@@ -6,12 +5,22 @@ export default {
   title: 'Components/HeroImage',
   component: HeroImage,
   argTypes: {
-    src: { control: 'text', defaultValue: 'https://via.placeholder.com/1200x400' },
+    src: {
+      control: 'text',
+      defaultValue: 'https://via.placeholder.com/1200x400',
+    },
     title: { control: 'text', defaultValue: 'Welcome to My Site' },
-    subtitle: { control: 'text', defaultValue: 'This is a hero image with an overlay' },
+    subtitle: {
+      control: 'text',
+      defaultValue: 'This is a hero image with an overlay',
+    },
     height: { control: 'text', defaultValue: '400px' },
     overlay: { control: 'boolean' },
-    align: { control: 'radio', options: ['left', 'center', 'right'], defaultValue: 'center' },
+    align: {
+      control: 'radio',
+      options: ['left', 'center', 'right'],
+      defaultValue: 'center',
+    },
   },
 } as Meta<typeof HeroImage>;
 

@@ -3,7 +3,9 @@ import { render } from '@testing-library/react';
 import Image from './Image';
 
 test('Image is visible', () => {
-  const { getByAltText } = render(<Image src="https://via.placeholder.com/300" alt="Test Image" />);
+  const { getByAltText } = render(
+    <Image src="https://via.placeholder.com/300" alt="Test Image" />
+  );
   expect(getByAltText('Test Image')).toBeVisible();
 });
 

@@ -13,7 +13,9 @@ test('Input field updates value on change', () => {
     <Input placeholder="Test Input" onChange={handleChange} />
   );
 
-  fireEvent.change(getByPlaceholderText('Test Input'), { target: { value: 'Hello' } });
+  fireEvent.change(getByPlaceholderText('Test Input'), {
+    target: { value: 'Hello' },
+  });
   expect(handleChange).toHaveBeenCalledWith('Hello');
 });
 
@@ -26,7 +28,9 @@ test('Disabled input field cannot be typed in', () => {
 });
 
 test('Error message appears when provided', () => {
-  const { getByText } = render(<Input placeholder="Test Input" error="This field is required" />);
+  const { getByText } = render(
+    <Input placeholder="Test Input" error="This field is required" />
+  );
   expect(getByText('This field is required')).toBeVisible();
 });
 

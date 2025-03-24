@@ -12,7 +12,11 @@ interface TableCellProps extends React.TdHTMLAttributes<HTMLTableCellElement> {
   children: React.ReactNode;
 }
 
-const TableCell: React.FC<TableCellProps> = ({ children, colSpan, ...props }) => {
+const TableCell: React.FC<TableCellProps> = ({
+  children,
+  colSpan,
+  ...props
+}) => {
   return (
     <StyledCell colSpan={colSpan} {...props}>
       {children}

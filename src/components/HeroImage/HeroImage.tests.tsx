@@ -11,14 +11,22 @@ test('Hero Image is visible', () => {
 
 test('Hero Image applies overlay when enabled', () => {
   const { container } = render(
-    <HeroImage src="https://via.placeholder.com/1200x400" title="Overlay Test" overlay />
+    <HeroImage
+      src="https://via.placeholder.com/1200x400"
+      title="Overlay Test"
+      overlay
+    />
   );
   expect(container.firstChild).toHaveStyle('position: relative');
 });
 
 test('Hero Image aligns text correctly', () => {
   const { getByText } = render(
-    <HeroImage src="https://via.placeholder.com/1200x400" title="Left Aligned" align="left" />
+    <HeroImage
+      src="https://via.placeholder.com/1200x400"
+      title="Left Aligned"
+      align="left"
+    />
   );
   const textContainer = getByText('Left Aligned').parentElement;
   expect(textContainer).toHaveStyle('text-align: left');

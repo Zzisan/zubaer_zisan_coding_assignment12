@@ -4,7 +4,7 @@ import { CardProps } from './Card.types';
 
 // Styled Card Container
 const CardContainer = styled.div<{ width?: string }>`
-  width: ${(props) => props.width || '300px'};  /* Ensure width is applied */
+  width: ${(props) => props.width || '300px'}; /* Ensure width is applied */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -48,20 +48,31 @@ const CardButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  
+
   &:hover {
     background: #0056b3;
   }
 `;
 
-const Card: React.FC<CardProps> = ({ image, title, description, buttonText, onButtonClick, width }) => {
+const Card: React.FC<CardProps> = ({
+  image,
+  title,
+  description,
+  buttonText,
+  onButtonClick,
+  width,
+}) => {
   return (
-    <CardContainer width={width}>  {/* Pass width as a prop */}
+    <CardContainer width={width}>
+      {' '}
+      {/* Pass width as a prop */}
       {image && <CardImage src={image} alt={title} />}
       <CardContent>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
-        {buttonText && <CardButton onClick={onButtonClick}>{buttonText}</CardButton>}
+        {buttonText && (
+          <CardButton onClick={onButtonClick}>{buttonText}</CardButton>
+        )}
       </CardContent>
     </CardContainer>
   );
