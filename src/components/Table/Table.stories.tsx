@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import Table from "./Table";
-import TableHeader from "./TableHeader";
-import TableRow from "./TableRow";
-import TableCell from "./TableCell";
-import TableFooter from "./TableFooter";
+import type { Meta, StoryObj } from '@storybook/react';
+import Table from './Table';
+import TableHeader from './TableHeader';
+import TableRow from './TableRow';
+import TableCell from './TableCell';
+import TableFooter from './TableFooter';
 
 export default {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
 } as Meta<typeof Table>;
 

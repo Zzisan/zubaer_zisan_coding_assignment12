@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledFooter = styled.tfoot`
   background-color: rgb(16, 43, 71); /* Blue background */

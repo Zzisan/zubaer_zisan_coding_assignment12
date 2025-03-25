@@ -1,10 +1,6 @@
 {
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "lint": "eslint . --fix",
-    "prettier:check": "prettier --check .",
-    "prettier:write": "prettier --write ."
-  }
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "semi": true
 }

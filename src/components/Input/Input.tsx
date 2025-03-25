@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { InputProps } from "./Input.types";
+import React from 'react';
+import styled from 'styled-components';
+import { InputProps } from './Input.types';
 
 // Styled Input Container
 const InputContainer = styled.div`
@@ -20,13 +20,13 @@ const StyledLabel = styled.label`
 const StyledInput = styled.input<{ hasError?: boolean }>`
   padding: 8px;
   font-size: 16px;
-  border: 1px solid ${(props) => (props.hasError ? "red" : "#ccc")};
+  border: 1px solid ${(props) => (props.hasError ? 'red' : '#ccc')};
   border-radius: 4px;
   outline: none;
   width: 100%;
 
   &:focus {
-    border-color: ${(props) => (props.hasError ? "red" : "#007bff")};
+    border-color: ${(props) => (props.hasError ? 'red' : '#007bff')};
   }
 
   &:disabled {

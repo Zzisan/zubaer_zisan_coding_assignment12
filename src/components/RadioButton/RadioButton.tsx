@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { RadioButtonProps } from "./RadioButton.types";
+import React from 'react';
+import styled from 'styled-components';
+import { RadioButtonProps } from './RadioButton.types';
 
 // Styled radio button container
 const StyledLabel = styled.label<{ disabled?: boolean }>`
@@ -8,8 +8,8 @@ const StyledLabel = styled.label<{ disabled?: boolean }>`
   align-items: center;
   gap: 10px;
   font-size: 16px;
-  color: ${(props) => (props.disabled ? "#aaa" : "#333")};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  color: ${(props) => (props.disabled ? '#aaa' : '#333')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 const StyledRadio = styled.input`

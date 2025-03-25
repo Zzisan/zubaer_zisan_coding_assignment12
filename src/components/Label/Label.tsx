@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { LabelProps } from "./Label.types";
+import React from 'react';
+import styled from 'styled-components';
+import { LabelProps } from './Label.types';
 
 // Styled component for the label
 const StyledLabel = styled.label<{ disabled?: boolean }>`
   font-size: 16px;
-  color: ${(props) => (props.disabled ? "#aaa" : "#333")};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  color: ${(props) => (props.disabled ? '#aaa' : '#333')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   display: block;
   margin-bottom: 5px;
 `;
