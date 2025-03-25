@@ -34,7 +34,10 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "ci": "npm run lint && npm run prettier:check && npm run test"
   },
   "eslintConfig": {
     "extends": [
