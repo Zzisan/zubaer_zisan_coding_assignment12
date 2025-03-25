@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TextProps } from './Text.types';
+import React from "react";
+import styled from "styled-components";
+import { TextProps } from "./Text.types";
 
 // Styled component for text
 const StyledText = styled.p<{
@@ -9,10 +9,10 @@ const StyledText = styled.p<{
   bold?: boolean;
   italic?: boolean;
 }>`
-  font-size: ${(props) => props.fontSize || '16px'};
-  color: ${(props) => props.color || '#333'};
-  font-weight: ${(props) => (props.bold ? 'bold' : 'normal')};
-  font-style: ${(props) => (props.italic ? 'italic' : 'normal')};
+  font-size: ${(props) => props.fontSize || "16px"};
+  color: ${(props) => props.color || "#333"};
+  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
+  font-style: ${(props) => (props.italic ? "italic" : "normal")};
   margin: 5px 0;
 `;
 

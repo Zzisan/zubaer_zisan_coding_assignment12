@@ -1,123 +1,178 @@
-# Component Library - Coding Assignment 12
+# 🚀 Component Library - Coding Assignment 13
 
-This project is a React-based UI component library developed using Create React App (TypeScript) and Storybook. It demonstrates the creation, testing, and deployment of reusable UI components.
+This project is a _React-based UI component library_ developed using _Create React App (TypeScript)_ and _Storybook_. It demonstrates the creation, testing, and deployment of reusable UI components.
 
-The production version is containerized with Docker and served using NGINX on `localhost:8083`.
+The production version is _containerized with Docker_ and serves the app on localhost:8018.
+
+---
 
 ## 📌 Project Overview
 
-### **Development:**
+### _Development:_
 
-- Built with **Create React App** using TypeScript.
-- Integrated with **Storybook** for interactive component development and testing.
-- Uses **Styled Components** for styling.
+- Built with _Create React App_ using TypeScript.
+- Integrated with _Storybook_ for interactive component development.
+- Uses _Styled Components_ for styling.
 
-### **Component Library:**
+### _Component Library:_
 
-The project includes reusable UI components:
-✅ **Button**
-✅ **Label**
-✅ **Text**
-✅ **Table** (with header, row, cell, footer)
-✅ **Dropdown**
-✅ **Radio Button**
-✅ **Image**
-✅ **Hero Image**
-✅ **Card**
+The project includes _reusable UI components_:
+✅ _Button_  
+✅ _Label_  
+✅ _Text_  
+✅ _Table_ (with header, row, cell, footer)  
+✅ _Dropdown_  
+✅ _Radio Button_  
+✅ _Image_  
+✅ _Hero Image_  
+✅ _Card_
 
 Each component follows best practices and has:
 
-- A `.tsx` file for implementation.
-- A `.types.tsx` file for prop definitions.
-- A `.stories.tsx` file for Storybook.
-- A `.tests.tsx` file for unit tests.
-- An `index.ts` file for exports.
+- A .tsx file for implementation.
+- A .types.tsx file for prop definitions.
+- A .stories.tsx file for Storybook.
+- A .test.tsx file for unit tests.
+- An index.ts file for exports.
 
-### **Production & Deployment:**
+### _Production & Deployment:_
 
-- A production build is generated via `npm run build`.
-- A Dockerfile is used to containerize the app, which is served by **NGINX**.
-- The Docker container is named **zubaer_zisan_coding_assignment12** and hosts the files in the working directory `zubaer_zisan_ui_garden`.
+- A _Dockerfile_ is used to containerize the app, which is served on localhost:8018.
+- A _GitHub Actions workflow_ is set up to automate builds and tests.
+- _Pre-commit hooks (Husky)_ ensure linting and formatting checks.
 
----
+## Project Summary
+
+Script Summary:
+
+1.ESLint & Prettier Setup:
+
+Installed ESLint, Prettier, and associated plugins.
+
+Configured ESLint with a flat configuration (eslint.config.mjs) and defined Prettier rules in .prettierrc.
+
+Verified code quality by running lint and prettier checks.
+
+2.Husky & lint-staged Pre-commit Hooks:
+
+Installed Husky and lint-staged.
+
+Configured a pre-commit hook to automatically run ESLint, Prettier, and tests on staged files, blocking commits if issues are found.
+
+3.Dockerization:
+
+Generated a production build using npm run build.
+
+Created a Dockerfile that sets a working directory (named according to the assignment), copies the build output, and uses NGINX to serve the app.
+
+Built and ran the Docker container, making the production app accessible on localhost.
+
+4.CI/CD with GitHub Actions:
+
+Set up a GitHub Actions workflow (.github/workflows/ci.yml) to run ESLint, Prettier, and tests on every push and pull request.
+
+Ensured automated quality checks to catch any issues before merging code.
+
+5.Version Control & Documentation:
+
+Managed changes via Git and GitHub with proper branching and Pull Requests.
+
+Documented all steps and commands in this README for clarity and reproducibility.
 
 ## 🚀 How to Run the Project
 
-### **Development Mode**
+### _⿡ Clone the Repository:_
 
-#### **1️⃣ Clone the Repository:**
+sh
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 
-```bash
-git clone https://github.com/Zzisan/zubaer_zisan_coding_assignment12.git
-cd zubaer_zisan_coding_assignment12
-```
+### _⿢ Install Dependencies:_
 
-#### **2️⃣ Install Dependencies:**
-
-```bash
+sh
 npm install
-```
 
-#### **3️⃣ Start the React Development Server:**
+### _⿣ Start the React Development Server:_
 
-```bash
+sh
 npm start
-```
 
-✅ The application will open at **[http://localhost:3000](http://localhost:3000)**
+✅ The application will open at _[http://localhost:3000](http://localhost:3000)_.
 
-#### **4️⃣ Launch Storybook:**
+### _⿤ Launch Storybook:_
 
-```bash
+sh
 npm run storybook
-```
 
-✅ Open **[http://localhost:6006](http://localhost:6006)** to interact with components.
+✅ Open _[http://localhost:6006](http://localhost:6006)_ to interact with components.
 
 ---
 
-## 🛠️ Running Tests
+## 🛠 Running Tests & Linting
 
-To verify the components work correctly, run:
+### _Run Tests:_
 
-```bash
-npm test
-```
+sh
+npm run test
 
 ✅ All tests should pass successfully.
+
+### _Run ESLint (Code Quality Check):_
+
+sh
+npm run lint
+
+### _Run Prettier (Code Formatting):_
+
+sh
+npm run prettier
 
 ---
 
 ## 📦 Production Mode with Docker
 
-### **1️⃣ Build the Production Version:**
+### _⿡ Build the Production Version:_
 
-```bash
+sh
 npm run build
-```
 
-✅ This creates an optimized production build inside the `build/` folder.
+✅ This creates an optimized production build inside the build/ folder.
 
-### **2️⃣ Build the Docker Image:**
+### _⿢ Build the Docker Image:_
 
-```bash
-docker build -t zubaer_zisan_coding_assignment12 .
-```
+sh
+docker build -t anvar_ui_garden .
 
-### **3️⃣ Run the Docker Container:**
+### _⿣ Run the Docker Container:_
 
-```bash
-docker run -p 8083:80 zubaer_zisan_coding_assignment12
-```
+sh
+docker run -p 8083:8083 anvar_ui_garden
 
-✅ Open **[http://localhost:8083](http://localhost:8083)** to view the production build.
+✅ Open _[http://localhost:8083](http://localhost:8083)_ to view the production build.
 
 ---
 
-## 📤 Submission Details
+## 🛡 GitHub Actions & Pre-commit Hooks
 
-- The **GitHub repository** is [here](https://github.com/Zzisan/zubaer_zisan_coding_assignment12).
-- The **Docker image** is built and runs on `localhost:8083`.
-- The **Storybook** components can be tested at `localhost:6006`.
+### _GitHub Actions_
 
-🎯 **This project demonstrates the ability to create, test, and deploy a UI component library efficiently using modern web development tools.** 🚀
+- The repository includes a _CI/CD pipeline_ that runs automated tests and linting on every push.
+- Build failures will be reported automatically.
+
+### _Pre-commit Hooks (Husky)_
+
+- Pre-commit checks _ESLint, Prettier, and tests_ to ensure code quality.
+- To manually run the checks:
+
+sh
+npm run lint && npm run prettier && npm run test
+
+---
+
+## 📄 Submission Details
+
+- _GitHub Repository:_ https://github.com/asyed04/coding-assignment-13.git
+- _Docker Image:_ Runs on localhost:8083
+- _Storybook URL:_ localhost:6006
+
+🎯 *This project demonstrates the ability to create, test, and deploy a UI component library efficiently using modern web development tools.* 🚀

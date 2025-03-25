@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { DropdownProps } from './Dropdown.types';
+import React from "react";
+import styled from "styled-components";
+import { DropdownProps } from "./Dropdown.types";
 
 // Styled dropdown
 const StyledSelect = styled.select<{ disabled?: boolean }>`
@@ -8,8 +8,8 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: ${(props) => (props.disabled ? '#eee' : 'white')};
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  background-color: ${(props) => (props.disabled ? "#eee" : "white")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   font-size: 16px;
 `;
 

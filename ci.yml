@@ -25,14 +25,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # Run ESLint (just checking for issues)
+      # Run ESLint with auto-fix disabled (just check for issues)
       - name: Run ESLint
         run: npm run lint
 
-      # Run Prettier Check
+      # Run Prettier check to ensure code formatting
       - name: Run Prettier Check
         run: npm run prettier:check
 
-      # Run Tests
+      # Run tests (ensure they complete without watch mode)
       - name: Run Tests
         run: npm test -- --watchAll=false

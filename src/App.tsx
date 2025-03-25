@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 // Import components
-import Button from './components/Button/Button';
-import Label from './components/Label/Label';
-import Text from './components/Text/Text';
-import Dropdown from './components/Dropdown/Dropdown';
-import RadioButton from './components/RadioButton/RadioButton';
-import Image from './components/Image/Image';
-import HeroImage from './components/HeroImage/HeroImage';
-import Card from './components/Card/Card';
-import Input from './components/Input/Input';
+import Button from "./components/Button/Button";
+import Label from "./components/Label/Label";
+import Text from "./components/Text/Text";
+import Dropdown from "./components/Dropdown/Dropdown";
+import RadioButton from "./components/RadioButton/RadioButton";
+import Image from "./components/Image/Image";
+import HeroImage from "./components/HeroImage/HeroImage";
+import Card from "./components/Card/Card";
+import Input from "./components/Input/Input";
 
 function App() {
-  const [selectedValue, setSelectedValue] = useState<string>('');
-  const [inputValue, setInputValue] = useState<string>('');
+  const [selectedValue, setSelectedValue] = useState<string>("");
+  const [inputValue, setInputValue] = useState<string>("");
 
   // Define dropdown options as an array of objects with value & label
   const dropdownOptions = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' },
+    { value: "option1", label: "Option 1" },
+    { value: "option2", label: "Option 2" },
+    { value: "option3", label: "Option 3" },
   ];
 
   return (
@@ -62,15 +62,15 @@ function App() {
         <RadioButton
           name="group1"
           label="Option A"
-          checked={selectedValue === 'A'}
-          onChange={() => setSelectedValue('A')}
+          checked={selectedValue === "A"}
+          onChange={() => setSelectedValue("A")}
         />
 
         <RadioButton
           name="group1"
           label="Option B"
-          checked={selectedValue === 'B'}
-          onChange={() => setSelectedValue('B')}
+          checked={selectedValue === "B"}
+          onChange={() => setSelectedValue("B")}
         />
 
         {/* Image */}

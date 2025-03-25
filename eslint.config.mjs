@@ -8,15 +8,15 @@ export default [
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      parser: tsParser
+      parser: tsParser,
     },
     plugins: {
       "@typescript-eslint": tsPlugin,
-      prettier: pluginPrettier
+      prettier: pluginPrettier,
     },
     rules: {
       // ...
-    }
+    },
   },
   // ...
 ];

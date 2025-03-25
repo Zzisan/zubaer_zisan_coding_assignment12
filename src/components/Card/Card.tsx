@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import { CardProps } from './Card.types';
+import React from "react";
+import styled from "styled-components";
+import { CardProps } from "./Card.types";
 
 // Styled Card Container
 const CardContainer = styled.div<{ width?: string }>`
-  width: ${(props) => props.width || '300px'}; /* Ensure width is applied */
+  width: ${(props) => props.width || "300px"}; /* Ensure width is applied */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <CardContainer width={width}>
-      {' '}
+      {" "}
       {/* Pass width as a prop */}
       {image && <CardImage src={image} alt={title} />}
       <CardContent>

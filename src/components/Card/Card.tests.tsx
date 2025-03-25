@@ -1,15 +1,15 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import Card from './Card';
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import Card from "./Card";
 
-test('Card renders correctly', () => {
+test("Card renders correctly", () => {
   const { getByText } = render(
-    <Card title="Test Card" description="This is a test card." />
+    <Card title="Test Card" description="This is a test card." />,
   );
-  expect(getByText('Test Card')).toBeVisible();
+  expect(getByText("Test Card")).toBeVisible();
 });
 
-test('Card button works when clicked', () => {
+test("Card button works when clicked", () => {
   const handleClick = jest.fn();
   const { getByText } = render(
     <Card
@@ -17,18 +17,18 @@ test('Card button works when clicked', () => {
       description="Test Description"
       buttonText="Click Me"
       onButtonClick={handleClick}
-    />
+    />,
   );
 
-  fireEvent.click(getByText('Click Me'));
+  fireEvent.click(getByText("Click Me"));
   expect(handleClick).toHaveBeenCalled();
 });
 
-test('Card renders without an image', () => {
+test("Card renders without an image", () => {
   const { queryByRole } = render(
-    <Card title="No Image Card" description="This card has no image." />
+    <Card title="No Image Card" description="This card has no image." />,
   );
-  expect(queryByRole('img')).toBeNull();
+  expect(queryByRole("img")).toBeNull();
 });
 
 export {}; // Ensures this file is treated as a module

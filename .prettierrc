@@ -6,6 +6,5 @@
     "lint": "eslint . --fix",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write ."
-   
   }
 }

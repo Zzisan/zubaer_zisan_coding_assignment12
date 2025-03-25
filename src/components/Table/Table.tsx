@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableProps } from './Table.types';
+import React from "react";
+import styled from "styled-components";
+import { TableProps } from "./Table.types";
 
 // Styled Table Container
 const StyledTable = styled.table`

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { HeroImageProps } from './HeroImage.types';
+import React from "react";
+import styled from "styled-components";
+import { HeroImageProps } from "./HeroImage.types";
 
 // Styled Hero Image Container
 const HeroContainer = styled.div<{
@@ -11,7 +11,7 @@ const HeroContainer = styled.div<{
   background-image: url(${(props) => props.src});
   background-size: cover;
   background-position: center;
-  height: ${(props) => props.height || '400px'};
+  height: ${(props) => props.height || "400px"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,10 +36,10 @@ const HeroContainer = styled.div<{
 `;
 
 // Styled Text Container
-const TextContainer = styled.div<{ align?: 'left' | 'center' | 'right' }>`
+const TextContainer = styled.div<{ align?: "left" | "center" | "right" }>`
   position: relative;
   max-width: 80%;
-  text-align: ${(props) => props.align || 'center'};
+  text-align: ${(props) => props.align || "center"};
 `;
 
 const HeroImage: React.FC<HeroImageProps> = ({
